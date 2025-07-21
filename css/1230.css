@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; /* 스크롤 방지 */
+}
+
+.main-header {
+  width: 100%;
+  height: auto;
+
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.namecard-image {
+  max-width: 100%;
+  max-height: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.canvas-wrapper {
+  flex: 1; /* 헤더 제외하고 남은 공간 모두 차지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas-container {
+  height: 100%; /* wrapper의 높이 차지 */
+  width: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
