@@ -25,6 +25,5 @@ goBtn.addEventListener('click', function() {
     console.log('Button clicked with selected value:', selectedValue);
 
     // 여기에 버튼 클릭시 실행할 로직 추가
-    window.location.replace(`http://localhost:63342/spatial/${selectedValue}.html`);
-    // alert(`선택된 값: ${selectedValue}로 이동합니다!`);
+    window.location.replace(`https://haeju20.github.io/${selectedValue}.html`);
 });
