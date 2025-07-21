@@ -1,0 +1,126 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  width: 100vw;
+  /* min-height: 100vh; */
+  overflow: hidden;
+}
+
+.main1-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-header {
+  width: 100%;
+  height: auto;
+
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.namecard-image {
+  max-width: 100%;
+  max-height: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.bg-landing-container {
+  display: grid; /* flex → grid로 변경 */
+  place-items: center;
+  position: relative;
+
+  padding: 30px 400px; /* 컨테이너 내부 여백 */
+}
+
+.bg-image {
+  grid-area: 1 / 1;
+  width: 100%;
+
+  /* max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto; */
+  object-fit: contain; /* cover */
+}
+
+.landing-container {
+  grid-area: 1 / 1; /* absolute 제거 */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  /* 배경 이미지와 정확히 같은 크기가 되도록 */
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    /* 이미지 비율 유지를 위한 aspect-ratio 추가 (선택사항) */
+
+  /* position: absolute;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+  top: 0;
+  left: 0; */
+}
+
+.title-image {
+  grid-column: 1;
+  grid-row: 1;
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  object-position: center;
+  align-self: end;
+  justify-self: end;
+}
+
+.ddl-container {
+  grid-column: 2;
+  grid-row: 1;
+
+  align-self: end;
+  justify-self: start;
+
+  display: flex;
+}
+
+/* top | right | bottom | left */
+#ddl-floors {
+  /* margin: 20px 0 0 30px;*/
+}
+
+#go-btn {
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+#go-btn.show {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+

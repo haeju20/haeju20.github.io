@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="main.css">
-  <meta charset="UTF-8">
-  <title>押入れ</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>what happened to me ...</title>
 </head>
 
 <body>
-
-<div class="oshiire-container">
-
-  <div class="hikido">
+  <div class="main1-container">
+    <div class="main-header">
+      <img src="./images/common/namecard.png" class="namecard-image"/>
+    </div>
+    <div class="bg-landing-container">
+      <img src="./images/common/bg-landing.png" class="bg-image"/>
+      <div class="landing-container">
+        <img src="./images/common/title-illust2.png" class="title-image"/>
+        <div class="ddl-container">
+          <select name="ddl-floors" id="ddl-floors">
+            <option value="----">last year</option>
+            <option value="0823">#0823</option> <!-- cake -->
+            <option value="1104">#----</option> <!-- bathtub -->
+            <option value="1127">#1127</option> <!-- snowflakes -->
+            <option value="1230">#1230</option> <!-- candle flame -->
+            <option value="0606">#0606</option> <!-- oshiire -->
+          </select>
+          <button id="go-btn" type="button">見る</button>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="background">
-    <img class="item" src="plaster-cast.png">
-  </div>
-  <script src="main.js"></script>
-</div>
+  <main>
+  </main>
+  <script src="./js/sketch.js"></script>
 
 </body>
 </html>
