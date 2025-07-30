@@ -25,5 +25,5 @@ goBtn.addEventListener('click', function() {
     console.log('Button clicked with selected value:', selectedValue);
 
     // 여기에 버튼 클릭시 실행할 로직 추가
-    window.location.replace(`https://haeju20.github.io/${selectedValue}.html`);
+    window.location.replace(`./${selectedValue}.html`);
 });

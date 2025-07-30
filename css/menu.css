@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+}
+
+.menu-main-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+.icon-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  max-height: 40px;
+  width: auto;
+  padding: 20px;
+}
+
+.room-icon {
+  max-height: 60px;
+  width: auto;
+  padding: 20px;
+}
+
+.pin-icon {
+  max-height: 20px;
+  width: auto;
+  padding: 10px;
+}
+
+.title-container {
+  flex: 1;
+  flex-direction: column;
+  padding-left: 30px;
+}
+
+.menu-title {
+  height: 100px; /* 모든 메뉴 아이템의 세로 길이 동일 */
+  align-self: flex-start; /* x축 시작 위치 동일하게 */
+  padding-bottom: 30px;
+}
+
+img {
+  object-fit: contain; /* 원본 비율 유지 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
