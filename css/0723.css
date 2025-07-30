@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start; /* 위에서부터 배치 */
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* 스크롤 방지 */
+}
+
+.main-header {
+  width: 100%;
+  height: auto;
+
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.namecard-image {
+  max-width: 100%;
+  max-height: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.img-wrapper {
+  flex: 1; /* 헤더 제외하고 남은 공간 모두 차지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  height: 90%; /* wrapper의 높이 차지 */
+  width: auto;
+}
+
+.img-bear {
+  position: absolute;
+  width: auto;
+  height: auto;
+
+  /* 각 이미지를 원본의 특정 퍼센트로 축소 */
+  transform-origin: center;
+}
+
+#img1 {
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-150px) rotate(0deg) scale(0.15);
+}
+
+#img2 {
+/*
+  background-image: url('../images/pages/0723-곰인형/곰인형-1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  */
+
+  transform: translate(-50%, -50%) rotate(45deg) translateY(-150px) rotate(-45deg) scale(0.15);
+}
+
+#img3 {
+  transform: translate(-50%, -50%) rotate(90deg) translateY(-150px) rotate(-90deg) scale(0.15);
+}
+
+#img4 {
+  transform: translate(-50%, -50%) rotate(135deg) translateY(-150px) rotate(-135deg) scale(0.15);
+}
+
+#img5 {
+  transform: translate(-50%, -50%) rotate(180deg) translateY(-150px) rotate(-180deg) scale(0.15);
+}
+
+#img6 {
+  transform: translate(-50%, -50%) rotate(225deg) translateY(-150px) rotate(-225deg) scale(0.15);
+}
+
+#img7 {
+  transform: translate(-50%, -50%) rotate(270deg) translateY(-150px) rotate(-270deg) scale(0.15);
+}
+
+#img8 {
+  transform: translate(-50%, -50%) rotate(315deg) translateY(-150px) rotate(-315deg) scale(0.15);
+}

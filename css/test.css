@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+}
+
+.test-main-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start; /* 위에서부터 배치 */
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* 스크롤 방지 */
+}
+
+.test-header {
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 20%;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+  background: white;
+}
+
+.menu-main-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  overflow: hidden;
+}
+
+.title-container {
+  flex:1;
+  flex-direction: column;
+  padding-left: 30px; /* 20*/
+
+  position: relative;
+}
+
+.pin-icon {
+  position: absolute;
+  left: 40px; /* 메뉴 왼쪽에 위치 */
+  width: 25px;
+  height: 20px;
+  background-image: url('../2025-1di/images/common/icon_clothes-pin.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pin-icon.visible {
+  opacity: 1;
+}
+
+.menu-title {
+  height: 60px; /* 모든 메뉴 아이템의 세로 길이 동일 */
+  align-self: flex-start; /* x축 시작 위치 동일하게 */
+  padding-bottom: 20px;
+
+  object-fit: contain; /* 원본 비율 유지 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease;
+}
+
+.menu-title.moved {
+  transform: translateX(50px); /* 아이콘 크기만큼 오른쪽으로 이동 */
+}
+
+.menu-icon {
+  position: absolute;
+  left: 30px;
+  max-width: 50px;
+  height: auto;
+}
+
+.menu-icon.rotated {
+  height: 50px;
+  width: auto;
+  max-width: none;
+}
+
+.title-image {
+  max-width: 100%;
+  max-height: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.test-bg-wrapper {
+  flex: 1; /* 헤더 제외하고 남은 공간 모두 차지 */
+  width: 80%; /* 또는 원하는 너비 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test-bg {
+  height: 85%; /* wrapper의 높이 차지 */
+  width: auto%; /* 또는 원하는 너비 */
+
+  background-image: url('../2025-1di/images/common/bg-grid.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: grid;
+  grid-template-columns: repeat(42, 1fr);
+  grid-template-rows: repeat(22, 1fr);
+  aspect-ratio: 42 / 22;
+}
+
+.test-wall {
+  grid-area: 2 / 2 / 22 / 42;
+
+  background-image: url('../2025-1di/images/common/wall-sketch.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#wall-window {
+  grid-area: 2 / 17 / 3 / 38;
+  z-index: 2;
+}
+
+.test-menu {
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  aspect-ratio: 40 / 20;
+}
+
+#desk {
+  grid-area: 2 / 2 / 12 / 20;
+
+  background-image: url('../2025-1di/images/common/menu_desk-bl-r.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  aspect-ratio: 18 / 10;
+  z-index: 0;
+}
+
+#name-desk {
+  grid-area: 10 / 4 / 11 / 6;
+
+  background-image: url('../2025-1di/images/common/menu_menu-desk-bl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+#name-desk:hover {
+  background-image: url('../2025-1di/images/common/menu_menu-desk-or.png');
+}
+
+#name-desk:hover + #desk {
+  background-image: url('../2025-1di/images/common/menu_desk-or-r.png');
+}
+
+#desk-keyboard {
+  grid-area: 4 / 6 / 5 / 12;
+  z-index: 2;
+}
+
+#desk-book {
+  grid-area: 6 / 7 / 8 / 9;
+  z-index: 2;
+}
+
+#desk-notebook {
+  grid-area: 6 / 9 / 9 / 13;
+  z-index: 2;
+}
+
+#desk-chair {
+  grid-area: 9 / 8 / 12 / 14;
+  z-index: 2;
+}
+
+#bookshelves {
+  grid-area: 17 / 2 / 20 / 15;
+
+  background-image: url('../2025-1di/images/common/menu_bookshelves-bl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#name-bookshelves {
+  grid-area: 17 / 15 / 18 / 20;
+
+  background-image: url('../2025-1di/images/common/menu_menu-bookshelves-bl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#name-bookshelves:hover {
+  background-image: url('../2025-1di/images/common/menu_menu-bookshelves-or.png');
+}
+
+#name-bookshelves:hover ~ #bookshelves{
+  background-image: url('../2025-1di/images/common/menu_bookshelves-or.png');
+}
+
+#table {
+  grid-area: 4 / 22 / 13 / 37;
+
+  background-image: url('../2025-1di/images/common/menu_contact-aboutme-bl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  z-index: 0;
+}
+
+#name-contact {
+  grid-area: 13 / 24 / 14 / 29;
+
+  background-image: url('../2025-1di/images/common/menu_menu-contact-bl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  z-index: 1;
+}
+
+#name-aboutme {
+  grid-area: 4 / 34 / 5 / 38;
+
+  background-image: url('../2025-1di/images/common/menu_menu-aboutme-bl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  z-index: 1;
+}
+
+#name-contact:hover {
+  background-image: url('../2025-1di/images/common/menu_menu-contact-or.png');
+}
+
+#name-aboutme:hover {
+  background-image: url('../2025-1di/images/common/menu_menu-aboutme-or.png');
+}
+
+#table-tea-you {
+  grid-area: 6 / 26 / 10 / 27;
+  z-index: 2;
+}
+
+#table-tea-me {
+  grid-area: 6 / 30 / 10 / 32;
+  z-index: 2;
+}
+
+#board {
+  grid-area: 2 / 38 / 14 / 40;
+
+  background-image: url('../2025-1di/images/common/menu_works-bl-r.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#name-works {
+  grid-area: 14 / 35 / 15 / 38;
+
+  background-image: url('../2025-1di/images/common/menu_menu-works-bl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#name-works:hover {
+  background-image: url('../2025-1di/images/common/menu_menu-works-or.png');
+}
+
+#name-works:hover + #board{
+  background-image: url('../2025-1di/images/common/menu_works-or-r.png');
+}
+
+#board-chalk {
+  grid-area: 2 / 39 / 12 / 40;
+  z-index: 2;
+}

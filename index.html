@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/p5.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/addons/p5.sound.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>what happened to me ...</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/test.css">
+  <title>sketch</title>
 </head>
-
 <body>
-  <div class="main1-container">
-    <div class="main-header">
-      <img src="./images/common/namecard.png" class="namecard-image"/>
-    </div>
-    <div class="bg-landing-container">
-      <img src="./images/common/bg-landing.png" class="bg-image"/>
-      <div class="landing-container">
-        <img src="./images/common/title-illust2.png" class="title-image"/>
-        <div class="ddl-container">
-          <select name="ddl-floors" id="ddl-floors">
-            <option value="----">last year</option>
-            <option value="0823">#0823</option> <!-- cake -->
-            <option value="1104">#----</option> <!-- bathtub -->
-            <option value="1127">#1127</option> <!-- snowflakes -->
-            <option value="1230">#1230</option> <!-- candle flame -->
-            <option value="0606">#0606</option> <!-- oshiire -->
-          </select>
-          <button id="go-btn" type="button">見る</button>
-        </div>
+  <div id="mySidenav" class="sidenav">
+    <div class="main-menu-container">
+      <div class="title-container">
+<!--        <div class="title-wrapper">-->
+          <div class="pin-icon" id="pin-icon"></div>
+          <img src="../images/common/icon_menu-about.png" class="menu-title" id="title-aboutme" />
+          <img src="../images/common/icon_menu-bookshelves.png" class="menu-title" id="title-bookshelves" />
+          <img src="../images/common/icon_menu-contact.png" class="menu-title" id="title-contact" />
+          <img src="../images/common/icon_menu-desk.png" class="menu-title" id="title-desk" />
+          <img src="../images/common/icon_menu-works.png" class="menu-title" id="title-works" />
+<!--        </div>-->
       </div>
     </div>
   </div>
 
-  <main>
-  </main>
-  <script src="./js/sketch.js"></script>
+  <div class="test-main-container">
+    <div class="test-header">
+      <img src="../images/common/icon_file-folder.png" class="menu-icon" />
+      <img src="../images/common/logo-jisu-sketch.png" class="title-image"/>
+    </div>
+
+    <div class="test-bg-wrapper" id="test-bg-wrapper">
+      <div class="test-bg">
+        <div class="test-wall">
+          <div class="test-menu">
+
+            <div class="img-desk" id="name-desk"></div>
+            <div class="img-desk" id="desk"></div>
+            <div class="desk-items" id="desk-keyboard"></div>
+            <div class="desk-items" id="desk-book"></div>
+            <div class="desk-items" id="desk-notebook"></div>
+            <div class="desk-items" id="desk-chair"></div>
+
+            <div class="img-bookshelves" id="name-bookshelves"></div>
+            <div class="img-bookshelves" id="bookshelves"></div>
+
+            <div class="img-table" id="table"></div>
+            <div class="table-items" id="table-tea-you"></div>
+            <div class="table-items" id="table-tea-me"></div>
+            <div class="img-table" id="name-contact"></div>
+            <div class="img-table" id="name-aboutme"></div>
+
+            <div class="img-board" id="name-works"></div>
+            <div class="img-board" id="board"></div>
+            <div class="board-items" id="board-chalk"></div>
+          </div>
+        </div>
+        <div class="wall-items" id="wall-window"></div>
+      </div>
+    </div>
+  </div>
 
 </body>
+<script src="../js/main.js"></script>
 </html>
