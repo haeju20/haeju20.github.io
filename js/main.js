@@ -1,8 +1,8 @@
 const sideNav = document.getElementById("mySidenav");
 const menuIcon = document.querySelector(".menu-icon");
 const menuIconState = {
-  closed: '../2025-1di/images/common/icon_file-folder.png',
-  open: '../2025-1di/images/common/icon_file-folder-rotated.png'
+  closed: '../images/common/icon_file-folder.png',
+  open: '../images/common/icon_file-folder-rotated.png'
 };
 let isMenuOpen = false;
 
@@ -40,7 +40,6 @@ function toggleMenuIcon() {
   } else {
     sideNav.style.width = "0";
     document.getElementById("test-bg-wrapper").style.marginLeft = "0";
-    // menuIcon.classList.remove('rotated');
   }
 }
 
