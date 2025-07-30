@@ -283,7 +283,7 @@ body {
 #board {
   grid-area: 2 / 38 / 14 / 40;
 
-  background-image: url('../2025-1di/images/common/menu_works-bl-r.png');
+  background-image: url('../images/common/menu_works-bl-r.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
