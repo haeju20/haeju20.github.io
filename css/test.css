@@ -62,7 +62,7 @@ body {
   left: 40px; /* 메뉴 왼쪽에 위치 */
   width: 25px;
   height: 20px;
-  background-image: url('../2025-1di/images/common/icon_clothes-pin.png');
+  background-image: url('../images/common/icon_clothes-pin.png');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
@@ -123,7 +123,7 @@ body {
   height: 85%; /* wrapper의 높이 차지 */
   width: auto%; /* 또는 원하는 너비 */
 
-  background-image: url('../2025-1di/images/common/bg-grid.png');
+  background-image: url('../images/common/bg-grid.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -137,7 +137,7 @@ body {
 .test-wall {
   grid-area: 2 / 2 / 22 / 42;
 
-  background-image: url('../2025-1di/images/common/wall-sketch.png');
+  background-image: url('../images/common/wall-sketch.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -158,7 +158,7 @@ body {
 #desk {
   grid-area: 2 / 2 / 12 / 20;
 
-  background-image: url('../2025-1di/images/common/menu_desk-bl-r.png');
+  background-image: url('../images/common/menu_desk-bl-r.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
@@ -169,7 +169,7 @@ body {
 #name-desk {
   grid-area: 10 / 4 / 11 / 6;
 
-  background-image: url('../2025-1di/images/common/menu_menu-desk-bl.png');
+  background-image: url('../images/common/menu_menu-desk-bl.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -177,11 +177,11 @@ body {
 }
 
 #name-desk:hover {
-  background-image: url('../2025-1di/images/common/menu_menu-desk-or.png');
+  background-image: url('../images/common/menu_menu-desk-or.png');
 }
 
 #name-desk:hover + #desk {
-  background-image: url('../2025-1di/images/common/menu_desk-or-r.png');
+  background-image: url('../images/common/menu_desk-or-r.png');
 }
 
 #desk-keyboard {
@@ -207,7 +207,7 @@ body {
 #bookshelves {
   grid-area: 17 / 2 / 20 / 15;
 
-  background-image: url('../2025-1di/images/common/menu_bookshelves-bl.png');
+  background-image: url('../images/common/menu_bookshelves-bl.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -215,24 +215,24 @@ body {
 #name-bookshelves {
   grid-area: 17 / 15 / 18 / 20;
 
-  background-image: url('../2025-1di/images/common/menu_menu-bookshelves-bl.png');
+  background-image: url('../images/common/menu_menu-bookshelves-bl.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #name-bookshelves:hover {
-  background-image: url('../2025-1di/images/common/menu_menu-bookshelves-or.png');
+  background-image: url('../images/common/menu_menu-bookshelves-or.png');
 }
 
 #name-bookshelves:hover ~ #bookshelves{
-  background-image: url('../2025-1di/images/common/menu_bookshelves-or.png');
+  background-image: url('../images/common/menu_bookshelves-or.png');
 }
 
 #table {
   grid-area: 4 / 22 / 13 / 37;
 
-  background-image: url('../2025-1di/images/common/menu_contact-aboutme-bl.png');
+  background-image: url('../images/common/menu_contact-aboutme-bl.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -243,7 +243,7 @@ body {
 #name-contact {
   grid-area: 13 / 24 / 14 / 29;
 
-  background-image: url('../2025-1di/images/common/menu_menu-contact-bl.png');
+  background-image: url('../images/common/menu_menu-contact-bl.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -254,7 +254,7 @@ body {
 #name-aboutme {
   grid-area: 4 / 34 / 5 / 38;
 
-  background-image: url('../2025-1di/images/common/menu_menu-aboutme-bl.png');
+  background-image: url('../images/common/menu_menu-aboutme-bl.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -263,11 +263,11 @@ body {
 }
 
 #name-contact:hover {
-  background-image: url('../2025-1di/images/common/menu_menu-contact-or.png');
+  background-image: url('../images/common/menu_menu-contact-or.png');
 }
 
 #name-aboutme:hover {
-  background-image: url('../2025-1di/images/common/menu_menu-aboutme-or.png');
+  background-image: url('../images/common/menu_menu-aboutme-or.png');
 }
 
 #table-tea-you {
@@ -292,18 +292,18 @@ body {
 #name-works {
   grid-area: 14 / 35 / 15 / 38;
 
-  background-image: url('../2025-1di/images/common/menu_menu-works-bl.png');
+  background-image: url('../images/common/menu_menu-works-bl.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #name-works:hover {
-  background-image: url('../2025-1di/images/common/menu_menu-works-or.png');
+  background-image: url('../images/common/menu_menu-works-or.png');
 }
 
 #name-works:hover + #board{
-  background-image: url('../2025-1di/images/common/menu_works-or-r.png');
+  background-image: url('../images/common/menu_works-or-r.png');
 }
 
 #board-chalk {
