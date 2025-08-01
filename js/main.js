@@ -29,6 +29,12 @@ const menuTitle = document.querySelectorAll('.menu-title');
 const pinIcon = document.getElementById('pin-icon');
 let currentHoveredItem = null;
 
+const titleAboutme = document.getElementById('title-aboutme');
+const titleBookshelves = document.getElementById('title-bookshelves');
+const titleContact = document.getElementById('title-contact');
+const titleDesk = document.getElementById('title-desk');
+const titleWorks = document.getElementById('title-works');
+
 function toggleMenuIcon() {
   isMenuOpen = !isMenuOpen;
   menuIcon.src = isMenuOpen ? menuIconState.open : menuIconState.closed;
@@ -103,20 +109,20 @@ function hidePin() {
 
 // contact:hover
 nameContact.addEventListener('mouseenter', function() {
-  table.style.backgroundImage = "url('../images/common/menu_contact-or.png')";
+  table.style.backgroundImage = "url('../images/common/room/menu_contact-or.png')";
 });
 
 nameContact.addEventListener('mouseleave', function() {
-  table.style.backgroundImage = "url('../images/common/menu_contact-aboutme-bl.png')";
+  table.style.backgroundImage = "url('../images/common/room/menu_contact-aboutme-bl.png')";
 });
 
 // aboutme:hover
 nameAboutme.addEventListener('mouseenter', function() {
-  table.style.backgroundImage = "url('../images/common/menu_aboutme-or.png')";
+  table.style.backgroundImage = "url('../images/common/room/menu_aboutme-or.png')";
 });
 
 nameAboutme.addEventListener('mouseleave', function() {
-  table.style.backgroundImage = "url('../images/common/menu_contact-aboutme-bl.png')";
+  table.style.backgroundImage = "url('../images/common/room/menu_contact-aboutme-bl.png')";
 });
 
 //menu click event(play an audio file)
@@ -160,7 +166,47 @@ wallWindow.addEventListener('click', function() {
   curtainAudio.play();
 });
 
+// redirect to desk menu
+nameDesk.addEventListener('click', function() {
+  location.href = "../desk/desk.html";
+});
+
+titleDesk.addEventListener('click', function() {
+  location.href = "../desk/desk.html";
+});
+
+// redirect to bookshelves menu
+nameBookshelves.addEventListener('click', function() {
+  location.href = "../bookshelves.html";
+});
+
+titleBookshelves.addEventListener('click', function() {
+  location.href = "../bookshelves.html";
+});
+
+// redirect to contact menu
+nameContact.addEventListener('click', function() {
+  location.href = "../contact.html";
+});
+
+titleContact.addEventListener('click', function() {
+  location.href = "../contact.html";
+});
+
+// redirect to aboutme menu
+nameAboutme.addEventListener('click', function() {
+  location.href = "../aboutme.html";
+});
+
+titleAboutme.addEventListener('click', function() {
+  location.href = "../aboutme.html";
+});
+
 // redirect to works menu
 nameWorks.addEventListener('click', function() {
-  location.href = "/works/0723.html";
+  location.href = "../works/works.html";
+});
+
+titleWorks.addEventListener('click', function() {
+  location.href = "../works/works.html";
 });
