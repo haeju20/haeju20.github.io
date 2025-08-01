@@ -1,0 +1,283 @@
+.jost-<uniquifier> {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.test-main-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start; /* 위에서부터 배치 */
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* 스크롤 방지 */
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 20%;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+  background: white;
+}
+
+.menu-main-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  overflow: hidden;
+}
+
+.title-container {
+  flex:1;
+  flex-direction: column;
+  padding-left: 30px; /* 20*/
+
+  position: relative;
+}
+
+.pin-icon {
+  position: absolute;
+  left: 40px; /* 메뉴 왼쪽에 위치 */
+  width: 25px;
+  height: 20px;
+  background-image: url('../images/common/icon_clothes-pin.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pin-icon.visible {
+  opacity: 1;
+}
+
+.menu-title {
+  height: 60px; /* 모든 메뉴 아이템의 세로 길이 동일 */
+  align-self: flex-start; /* x축 시작 위치 동일하게 */
+  padding-bottom: 20px;
+
+  object-fit: contain; /* 원본 비율 유지 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease;
+}
+
+.menu-title.moved {
+  transform: translateX(50px); /* 아이콘 크기만큼 오른쪽으로 이동 */
+}
+
+.test-header {
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.icon-wrapper {
+  position: absolute;
+  left: 30px;
+
+  display: flex;
+  direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-icon {
+  max-width: 50px;
+  height: auto;
+}
+
+.menu-icon.rotated {
+  height: 50px;
+  width: auto;
+  max-width: none;
+}
+
+.room-icon {
+  max-height: 60px;
+  width: auto;
+}
+
+.title-image {
+  max-width: 100%;
+  max-height: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.test-bg-wrapper {
+  flex: 1;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two-cards-wrapper {
+  height: 85%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15%;
+}
+
+.character-wrapper {
+  /* width: 25%; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-description {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+}
+
+#greeting-message {
+  /* padding-bottom: 10px; */
+}
+
+.bg-grid-character {
+  flex: 1;
+  height: 450px;
+
+  background-image: url('../images/common/bg-grid-character.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  aspect-ratio: 12 / 20;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.img-character-hi {
+  grid-area: 3 / 4 / 20 / 10;
+  background-image: url('../images/common/character-hi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  aspect-ratio: 6 / 17;
+}
+
+.card-wrapper {
+  /* width: 40%; */
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-grid-card {
+  flex: 1;
+  height: 450px;
+
+  background-image: url('../images/common/bg-grid-card.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  aspect-ratio: 1 / 1;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.info-container-top {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: left;
+
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.info-container-bottom {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#info-container-name {
+  grid-area: 2 / 2 / 3 / 10;
+}
+
+#info-container-study {
+  grid-area: 3 / 2 / 4 / 10;
+}
+
+#info-container-explore {
+  grid-area: 5 / 3 / 6 / 10;
+}
+
+#info-container-love1 {
+  grid-area: 6 / 3 / 7 / 10;
+}
+
+#info-container-love2 {
+  grid-area: 7 / 3 / 8 / 10;
+}
+
+#info-container-love3 {
+  grid-area: 8 / 3 / 9 / 10;
+}
+
+#card-message {
+  text-align: right;
+
+  text-decoration: underline;
+  cursor: pointer;
+  /* padding-top: 10px; */
+  align-items: flex-end;
+}
+
+.empty-text {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  visibility: hidden;
+}

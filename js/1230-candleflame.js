@@ -21,9 +21,9 @@ function setup() {
   centerX = width / 2;
   centerY = height / 2;
   bottomY = height * 0.6;
-  imgWhite = loadImage('./images/pages/1230-candleflame/happybirthday-white.png');
-  imgBlack = loadImage('./images/pages/1230-candleflame/happybirthday-black.png');
-  imgCake = loadImage('./images/pages/1230-candleflame/cake.png');
+  imgWhite = loadImage('../images/pages/1230-candleflame/happybirthday-white.png');
+  imgBlack = loadImage('../images/pages/1230-candleflame/happybirthday-black.png');
+  imgCake = loadImage('../images/pages/1230-candleflame/cake.png');
 }
 
 function draw() {
