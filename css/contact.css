@@ -207,27 +207,18 @@ body {
 .bg-grid-card {
   flex: 1;
   height: 450px;
-
-  background-image: url('../images/common/bg-grid-card.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  aspect-ratio: 1 / 1;
-
   margin-top: 5px;
   margin-bottom: 5px;
+
+  perspective: 1000px;
 }
 
 .contact-container {
   font-family: "Jost", sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
 
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 10px;
 }
 
@@ -237,7 +228,6 @@ body {
   font-size: 24px;
 
   color: grey;
-  padding-top: 10px;
   padding-left: 10px;
 }
 
@@ -246,7 +236,8 @@ body {
 }
 
 #input-container-name {
-  grid-area: 2 / 5 / 3 / 10;
+  grid-area: 2 / 4 / 3 / 10;
+  padding-top: 2px;
 }
 
 #contact-container-email {
@@ -254,7 +245,8 @@ body {
 }
 
 #input-container-email {
-  grid-area: 3 / 5 / 4 / 10;
+  grid-area: 3 / 4 / 4 / 10;
+  padding-top: 2px;
 }
 
 #contact-container-message {
@@ -262,7 +254,88 @@ body {
 }
 
 #input-container-message {
-  grid-area: 4 / 5 / 5 / 10;
+  grid-area: 4 / 4 / 9 / 10;
+  padding-top: 2px;
+}
+
+input[type=text] {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+
+  width: 95%;
+  border: none;
+  background: none;
+  border-bottom: 2px solid black;
+}
+
+textarea {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+
+  width: 95%;
+  height: 210px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid black;
+}
+
+#contact-container-myName {
+  grid-area: 6 / 7 / 7 / 10;
+}
+
+#contact-container-myEmail {
+  grid-area: 7 / 5 / 8 / 10;
+}
+
+#contact-container-mySite {
+  grid-area: 8 / 5 / 9 / 10;
+}
+
+.contact-myContainer {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+
+  padding-top: 10px;
+  text-align: right;
+}
+
+.bg-grid-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+  background-image: url('../images/common/bg-grid-card.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  aspect-ratio: 1 / 1;
+}
+
+.rotated {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.bg-grid-card-front, .bg-grid-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.bg-grid-card-back {
+  transform: rotateY(180deg);
 }
 
 #flip-message {
@@ -278,6 +351,10 @@ body {
   cursor: pointer;
   /* padding-top: 10px; */
   align-items: flex-end;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .empty-text {

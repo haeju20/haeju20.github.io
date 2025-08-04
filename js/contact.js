@@ -84,6 +84,14 @@ function hidePin() {
     }
 }
 
+const flipMessage = document.getElementById("flip-message");
+const submitMessage = document.getElementById("submit-message");
+const gridCard = document.querySelector(".bg-grid-card-inner");
+flipMessage.addEventListener('click', function() {
+  gridCard.classList.toggle('rotated');
+  submitMessage.classList.toggle('hidden');
+});
+
 // redirect to main page
 roomIcon.addEventListener('click', function() {
   location.href = "../2025-1di/index.html";
